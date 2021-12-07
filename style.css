@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Righteous', cursive;
+}
+
+#background {
+    background-color: black;
+    background-size: cover;
+    height: 100vh;
+}
+
+#nav {
+    position: fixed;
+    z-index: 100;
+}
+
+#nav img {
+    width: 100px;
+}
+
+#navOptions {
+    width: 50vw;
+    background-color: rgb(31, 31, 31);
+    height: 100vh;
+    position: absolute;
+    margin-top: 0;
+    margin-left: -50vw;
+    z-index: 40;
+}
+
+#openedNav {
+    visibility: hidden;
+    position: fixed;
+    z-index: 10000;
+}
+
+#openedNav img {
+    width: 100px;
+}
+
+#navOptionsA {
+    margin-top: 15vh;
+}
+
+#navOptionsA p {
+    margin-top: 5vh;
+    margin-left: 2vw;
+}
+
+#randomCard button {
+    position: absolute;
+    width: 60vw;
+}
+
+#randomCard {
+    margin-top: -25vh;
+}
+
+/* essentials */
+
+#flashCardWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#essentialCard {
+    width: 60vw;
+    height: 40vh;
+    margin-top: 30vh;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#flashCardInnerText {
+    width: 50vw;
+    height: 40vh;
+}
+
+#flashCardInnerText  {
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -0%);
+    text-align: center;
+    font-size: 40px;
+}
+
+#essentialNextBtn button {
+    width: 60vw;
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
+}
+
+#essentialPreviousBtn button {
+    position: absolute;
+    width: 60vw;
+}
+
+#flipButtonsEssentials button {
+    width: 30vw;
+}
+
+#flipBtn1 button {
+    position: absolute;
+    margin-top: -10vh;
+}
+
+#flipBtn2 button {
+    position: absolute;
+    left: 50%;
+    margin-top: -10vh;
+}
+
+#essentialResetBtn button {
+    width: 60vw;
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
+}
+
+/* essentials */
+
+#gears {
+    position: fixed;
+}
+
+#gear1 {
+    margin-left: -22.5px;
+    margin-top: 1vh;
+    position: absolute;
+    transform-origin: 50% 55%;
+}
+
+#gear2 {
+    position: absolute;
+    transform-origin: 50% 40%;
+    transform-box: fill-box;
+}
+
+#gear2 img {
+    margin-left: 0.5vw;
+    margin-top: -20px;
+    width: 80px;
+}
+
+#gear3 img {
+    width: 70px;
+    margin-top: 2vh;
+    margin-left: 35px;
+}
+
+#gear3 {
+    transform-origin: 65% 60%;
+}
+
+.gearSpin {
+    animation: gearSpin 0.5s linear;
+    animation-fill-mode: forwards;
+}
+
+.gearSpin2 {
+    animation: gearSpin2 0.5s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes gearSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes gearSpin2 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+#rightHalf {
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    left: 50%;
+}
+
+#title {
+    left: 45%;
+    transform: translate(-50%, 0%);
+    margin-right: 100px;
+    font-size: 30px;
+    position: absolute;
+}
+
+#title h1 {
+    margin-top: 2vh;
+    color: white;
+}
+
+#title img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin-top: -80px;
+    left: 115%;
+    transform: translate(-50%, 0%);
+    filter: invert(100%);
+}
+
+#alphabet h1 {
+    /* color: #104a8e; */
+    color: white;
+    margin-top: 14vh;
+    position: absolute;
+    margin-left: 10vw;
+}
+
+#alphabetBtn button {
+    margin-top: 20vh;
+    margin-left: 10vw;
+}
+
+#essentials h1 {
+    color: white;
+    position: absolute;
+    margin-left: 10vw;
+    margin-top: 10vh;
+}
+
+#essentials button {
+    margin-top: 17vh;
+    margin-left: 10vw;
+}
+
+#card1InnerText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#card1 {
+    width: 60vw;
+    height: 40vh;
+    margin-top: 30vh;
+    background-color: white;
+    border-radius: 20px;
+    z-index: 34;
+    
+}
+
+#card1InnerText h1 {
+    margin-top: 17.5vh;
+}
+
+
+#flipButtons {
+    margin-top: -15vh;
+    position: absolute;
+}
+
+#flipButtons button {
+    width: 30vw;
+}
+
+#nextCard button {
+    position: absolute;
+    margin-top: 35.5vh;
+    width: 60vw;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+#resetCards button {
+    position: absolute;
+    margin-top: 35.5vh;
+    width: 60vw;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+#previousCard button {
+    position: absolute;
+    margin-top: 38vh;
+    width: 60vw;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+#randomCardAlphabet {
+    margin-top: -25vh;
+    margin-bottom: -3vh;
+}
+
+#randomCardAlphabet button {
+    position: absolute;
+    width: 60vw;
+}
+
+/* essential phrases */
+
+#essentialPhraseCard {
+    width: 60vw;
+    height: 40vh;
+    background-color: white;
+    margin-top: 30vh;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    border-radius: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+
+#showAnswer {
+    margin-top: 26.5vh;
+    position: absolute;
+    left: 20vw;
+}
+
+#showAnswer button {
+    width: 30vw;
+}
+
+#hideAnswer {
+    margin-top: 26.5vh;
+    position: absolute;
+    left: 50vw;
+}
+
+#hideAnswer button {
+    width: 30vw;
+}
+
+#nextCardEssentialPhrases button {
+    width: 60vw;
+}
+
+#nextCardEssentialPhrases {
+    position: absolute;
+    margin-top: 70.5vh;
+    left: 20vw;
+}
+
+#previousCardEssentialPhrases button {
+    width: 60vw;
+}
+
+#previousCardEssentialPhrases {
+    position: absolute;
+    margin-top: 73vh;
+    left: 20vw;
+}
+
+/* word list alphabet */
+
+#alphabetList {
+    color: white;
+    margin-top: 15vh;
+    position: absolute;
+    margin-left: 2vw;
+}
+
+
+
+
+

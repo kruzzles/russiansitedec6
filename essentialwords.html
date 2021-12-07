@@ -1,0 +1,441 @@
+<!-- cool color scheme: https://i.pinimg.com/564x/3a/37/4b/3a374b7effe1277b80c1a5f377c010e4.jpg -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://cdn.britannica.com/42/3842-004-F47B77BC/Flag-Russia.jpg">
+    <title> Russian Essential Words </title>
+</head>
+<body style="background-color: black;">
+
+    <!-- top navigation -->
+    <div id="nav" onclick="openNav()">
+        <div id="gears">
+            <div id="gear1"> <img src="images/gear1.png"> </div>
+            <div id="gear2"> <img src="images/gear1.png"> </div>
+            <div id="gear3"> <img src="images/gear1.png"> </div>
+        </div>
+        <img src="images/blank.png">
+    </div>
+
+    <div id="navOptions">
+        <div id="navOptionsA">
+        <p><a href="index.html" style="margin-top: 10%; color: white;"> HOME </a></p>
+        <p><a href="essentialwords.html" style="color: white;"> ESSENTIALS </a></p>
+    </div>
+    </div>
+
+    <div id="openedNav" onclick="closeNav()">
+        <div id="gears">
+        </div>
+        <img src="images/blank.png">
+    </div>
+
+    <!-- top navigation -->
+
+    <div id="background">
+
+    <div id="flashCardWrapper">
+        <div id="randomCard"><button onclick=" x = Math.floor(Math.random() * 38) + 1; hideAnswer();"> RANDOM CARD </button></div>
+        <div id="flipButtonsEssentials">
+            <div id="flipBtn1"><button onclick="revealAnswer()"> SHOW ANSWER </button></div>
+            <div id="flipBtn2"><button onclick="hideAnswer()"> HIDE ANSWER </button></div>
+        </div>
+        <div id="flashCard">
+            <div id="essentialCard">
+            <div id="flashCardInnerText">
+             YES 
+        </div>
+        </div>
+        <div id="essentialNextBtn">
+            <button onclick="x++, hideAnswer();"> NEXT CARD </button>
+        </div>
+        <div id="essentialResetBtn">
+            <button onclick="window.location.reload();"> RESET CARDS </button>
+        </div>
+        <div id="essentialPreviousBtn">
+            <button onclick="x--, hideAnswer();"> PREVIOUS CARD </button>
+        </div>
+        </div>
+    </div>
+
+</div>
+
+    <script>
+
+        const nav = document.getElementById("nav");
+        const navOptions = document.getElementById("navOptions");
+        const openedNav = document.getElementById("openedNav"); 
+        const gear1 = document.getElementById("gear1")
+        const gear2 = document.getElementById("gear2")
+        const gear3 = document.getElementById("gear3")
+        const essentialCard = document.getElementById("essentialCard");
+        const flashCardInnerText = document.getElementById("flashCardInnerText");
+        const essentialNextBtn = document.getElementById("essentialNextBtn");
+        const essentialResetBtn = document.getElementById("essentialResetBtn");
+        essentialResetBtn.style.display = "none";
+        var x = 1;
+
+        function openNav() {
+            navOptions.style.marginLeft = "0";
+            navOptions.style.transition = "1s";
+            openedNav.style.visibility = "visible";
+            navOptions.style.visibility = "visible";
+
+            gear3.style.transform = "rotate(360deg)";
+            gear3.style.transition = "1s";
+
+            
+            gear2.style.transform = "rotate(-360deg)";
+            gear2.style.transition = "1s"; 
+          
+
+            gear1.style.transform = "rotate(360deg)";
+            gear1.style.transition = "1s";
+
+
+        }
+
+        function closeNav() {
+            navOptions.style.marginLeft = "-50vw";
+            nav.style.visibility = "visible";
+            openedNav.style.visibility = "hidden";
+            navOptions.style.transition = "1s";
+      
+            gear3.style.transform = "rotate(-360deg)";
+            gear3.style.transition = "1s";
+
+            gear2.style.transform = "rotate(360deg)";
+            gear2.style.transition = "1s";
+
+            gear1.style.transform = "rotate(-360deg)";
+            gear1.style.transition = "1s";
+        
+        }
+
+        function revealAnswer() {
+            essentialCard.style.transform = "rotateX(180deg)"
+            essentialCard.style.transition = "1s";
+
+            if (x == 1) {
+            flashCardInnerText.innerHTML = "да" + "<br>" + "pronounciation: 'da'";
+            }
+
+            if (x == 2) {
+            flashCardInnerText.innerHTML = "нет" + "<br>" + "pronounciation: 'nee-yet'";
+            }
+
+            if (x == 3) {
+            flashCardInnerText.innerHTML = "привет" + "<br>" + "pronounciation: 'pree-vyet'";
+            }
+
+            if (x == 4) {
+            flashCardInnerText.innerHTML = "спасибо" + "<br>" + "pronounciation: 'spa-see-ba'";
+            }
+
+            if (x == 5) {
+            flashCardInnerText.innerHTML = "пожалуйста" + "<br>" + "pronounciation: 'ba-zhaul-sta'";
+            }
+
+            if (x == 6) {
+            flashCardInnerText.innerHTML = "пока" + "<br>" + "pronounciation: 'paka'";
+            }
+
+            if (x == 7) {
+            flashCardInnerText.innerHTML = "я" + "<br>" + "pronounciation: 'ya'";
+            }
+
+            if (x == 8) {
+            flashCardInnerText.innerHTML = "и" + "<br>" + "pronounciation: 'ee'";
+            }
+
+            if (x == 9) {
+            flashCardInnerText.innerHTML = "или" + "<br>" + "pronounciation: 'ee-li'";
+            }
+
+            if (x == 10) {
+            flashCardInnerText.innerHTML = "этот" + "<br>" + "pronounciation: 'ehh-tot'";
+            }
+
+            if (x == 11) {
+            flashCardInnerText.innerHTML = "тот" + "<br>" + "pronounciation: 'tot'";
+            }
+
+            if (x == 12) {
+            flashCardInnerText.innerHTML = "там" + "<br>" + "pronounciation: 'tam'";
+            }
+
+            if (x == 13) {
+            flashCardInnerText.innerHTML = "их" + "<br>" + "pronounciation: 'ee-kh'";
+            }
+
+            if (x == 14) {
+            flashCardInnerText.innerHTML = "кто" + "<br>" + "pronounciation: 'kto'";
+            }
+
+            if (x == 15) {
+            flashCardInnerText.innerHTML = "что" + "<br>" + "pronounciation: 'ch-to'";
+            }
+
+            if (x == 16) {
+            flashCardInnerText.innerHTML = "где" + "<br>" + "pronounciation: 'g-de'";
+            }
+
+            if (x == 17) {
+            flashCardInnerText.innerHTML = "когда" + "<br>" + "pronounciation: 'kug-da'";
+            }
+
+            if (x == 18) {
+            flashCardInnerText.innerHTML = "почему" + "<br>" + "pronounciation: 'puh-cha-moo'";
+            }
+
+            if (x == 19) {
+            flashCardInnerText.innerHTML = "как" + "<br>" + "pronounciation: 'kak'";
+            }
+
+            if (x == 20) {
+            flashCardInnerText.innerHTML = "хорошо" + "<br>" + "pronounciation: 'kha-rah-sho'";
+            }
+
+            if (x == 21) {
+            flashCardInnerText.innerHTML = "плохо" + "<br>" + "pronounciation: 'plo-kha'";
+            }
+
+            if (x == 22) {
+            flashCardInnerText.innerHTML = "отлично" + "<br>" + "pronounciation: 'at-leech-na'";
+            }
+
+            if (x == 23) {
+            flashCardInnerText.innerHTML = "это" + "<br>" + "pronounciation: 'ehh-ta'";
+            }
+
+            if (x == 24) {
+            flashCardInnerText.innerHTML = "мой" + "<br>" + "pronounciation: 'moy'";
+            }
+
+            if (x == 25) {
+            flashCardInnerText.innerHTML = "не" + "<br>" + "pronounciation: 'nee-eh'";
+            }
+
+            if (x == 26) {
+            flashCardInnerText.innerHTML = "ты" + "<br>" + "pronounciation: 't-owee'" + "<br>" + "OR" + "<br>" + "вы" + "<br>" + "pronounciation: 'v-owee";
+            }
+
+            if (x == 27) {
+            flashCardInnerText.innerHTML = "в" + "<br>" + "pronounciation: 'vw'";
+            }
+
+            if (x == 28) {
+            flashCardInnerText.innerHTML = "он" + "<br>" + "pronounciation: 'on'";
+            }
+
+            if (x == 29) {
+            flashCardInnerText.innerHTML = "она" + "<br>" + "pronounciation: 'on-ah'";
+            }
+
+            if (x == 30) {
+            flashCardInnerText.innerHTML = "нас" + "<br>" + "pronounciation: 'nas'" + "<br>" + "OR" + "<br>" + "мы" + "<br>" + "pronounciation: 'm-owee'";
+            }
+
+            if (x == 31) {
+            flashCardInnerText.innerHTML = "с" + "<br>" + "pronounciation: 's'";
+            }
+
+            if (x == 32) {
+            flashCardInnerText.innerHTML = "но" + "<br>" + "pronounciation: 'no'";
+            }
+
+            if (x == 33) {
+            flashCardInnerText.innerHTML = "все" + "<br>" + "pronounciation: 'f-see-ah'";
+            }
+
+            if (x == 34) {
+            flashCardInnerText.innerHTML = "никто" + "<br>" + "pronounciation: 'neek-to'";
+            }
+
+            if (x == 35) {
+            flashCardInnerText.innerHTML = "они" + "<br>" + "pronounciation: 'on-ee'";
+            }
+
+            if (x == 36) {
+            flashCardInnerText.innerHTML = "ваш" + "<br>" + "pronounciation: 'vash'";
+            }
+
+            if (x == 37) {
+            flashCardInnerText.innerHTML = "извините" + "<br>" + "pronounciation: 'eez-vin-ee-te'";
+            }
+            
+
+            flashCardInnerText.style.transform = "rotateX(180deg)"
+            flashCardInnerText.style.left = "8%";
+        }
+
+        function hideAnswer() {
+            essentialCard.style.transform = "rotateX(0deg)"
+            essentialCard.style.transition = "1s";
+            flashCardInnerText.style.transform = "rotateX(0deg)"
+            flashCardInnerText.style.left = "8%";
+
+            if (x >=1 && x <= 36) {
+                essentialResetBtn.style.display = "none";
+                essentialNextBtn.style.display = "block";
+            }
+
+            if (x == 1) {
+            flashCardInnerText.innerHTML = "YES";
+            }
+
+            if (x == 2) {
+            flashCardInnerText.innerHTML = "NO";
+            }
+
+            if (x == 3) {
+            flashCardInnerText.innerHTML = "HI (INFORMAL)";
+            }
+
+            if (x == 4) {
+            flashCardInnerText.innerHTML = "THANK YOU";
+            }
+
+            if (x == 5) {
+            flashCardInnerText.innerHTML = "PLEASE/ YOUR WELCOME";
+            }
+
+            if (x == 6) {
+            flashCardInnerText.innerHTML = "BYE";
+            }
+
+            if (x == 7) {
+            flashCardInnerText.innerHTML = "I";
+            }
+
+            if (x == 8) {
+            flashCardInnerText.innerHTML = "AND";
+            }
+
+            if (x == 9) {
+            flashCardInnerText.innerHTML = "OR";
+            }
+
+            if (x == 10) {
+            flashCardInnerText.innerHTML = "THIS";
+            }
+
+            if (x == 11) {
+            flashCardInnerText.innerHTML = "THAT";
+            }
+
+            if (x == 12) {
+            flashCardInnerText.innerHTML = "THERE";
+            }
+
+            if (x == 13) {
+            flashCardInnerText.innerHTML = "THEIR";
+            }
+
+            if (x == 14) {
+            flashCardInnerText.innerHTML = "WHO";
+            }
+
+            if (x == 15) {
+            flashCardInnerText.innerHTML = "WHAT";
+            }
+
+            if (x == 16) {
+            flashCardInnerText.innerHTML = "WHERE";
+            }
+
+            if (x == 17) {
+            flashCardInnerText.innerHTML = "WHEN";
+            }
+
+            if (x == 18) {
+            flashCardInnerText.innerHTML = "WHY";
+            }
+
+            if (x == 19) {
+            flashCardInnerText.innerHTML = "HOW";
+            }
+
+            if (x == 20) {
+            flashCardInnerText.innerHTML = "GOOD/ FINE";
+            }
+
+            if (x == 21) {
+            flashCardInnerText.innerHTML = "BAD/ POORLY";
+            }
+
+            if (x == 22) {
+            flashCardInnerText.innerHTML = "GREAT/ AMAZING";
+            }
+
+            if (x == 23) {
+            flashCardInnerText.innerHTML = "THIS IS/ IT IS/ IS IT?";
+            }
+
+            if (x == 24) {
+            flashCardInnerText.innerHTML = "MY";
+            }
+
+            if (x == 25) {
+            flashCardInnerText.innerHTML = "NOT/ DON'T";
+            }
+
+            if (x == 26) {
+            flashCardInnerText.innerHTML = "YOU";
+            }
+            
+            if (x == 27) {
+            flashCardInnerText.innerHTML = "IN/ THE";
+            }
+
+            if (x == 28) {
+            flashCardInnerText.innerHTML = "HE";
+            }
+
+            if (x == 29) {
+            flashCardInnerText.innerHTML = "SHE";
+            }
+
+            if (x == 30) {
+            flashCardInnerText.innerHTML = "US/ WE";
+            }
+
+            if (x == 31) {
+            flashCardInnerText.innerHTML = "WITH/ FROM";
+            }
+
+            if (x == 32) {
+            flashCardInnerText.innerHTML = "BUT";
+            }
+
+            if (x == 33) {
+            flashCardInnerText.innerHTML = "EVERYONE";
+            }
+
+            if (x == 34) {
+            flashCardInnerText.innerHTML = "NOBODY";
+            }
+
+            if (x == 35) {
+            flashCardInnerText.innerHTML = "THEY";
+            }
+
+            if (x == 36) {
+            flashCardInnerText.innerHTML = "YOUR";
+            }
+
+            if (x == 37) {
+            flashCardInnerText.innerHTML = "SORRY/ EXCUSE ME";
+            essentialNextBtn.style.display = "none";
+            essentialResetBtn.style.display = "block"
+            }
+        }
+
+    </script>
+
+</body>
+</html>
